@@ -1,0 +1,26 @@
+{
+    "roles": [
+        "Developer",
+        "AI Architect",
+        "System Administrator",
+        "Data Scientist"
+    ],
+    "protocols": [
+        "HTTP",
+        "WebSocket",
+        "gRPC",
+        "MQTT"
+    ],
+    "architectures": [
+        "Microservices",
+        "Monolithic",
+        "Event-Driven",
+        "Serverless"
+    ],
+    "tools": {
+        "Developer": ["GitHub", "VsCode", "Docker"],
+        "AI Architect": ["PyTorch", "TensorFlow", "Keras"],
+        "System Administrator": ["Kubernetes", "AWS", "Terraform"],
+        "Data Scientist": ["Jupyter", "Pandas", "Scikit-learn"]
+    }
+}
