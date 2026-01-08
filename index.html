@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta-Prompt Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 1rem;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 4px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meta-Prompt Generator</h1>
+        
+        <form id="metaForm">
+            <label for="roles">Roles</label>
+            <input type="text" id="roles" name="roles" placeholder="Enter roles (e.g., Writer, Developer)">
+            
+            <label for="protocols">Protocols</label>
+            <input type="text" id="protocols" name="protocols" placeholder="Enter protocols (e.g., REST, GraphQL)">
+            
+            <label for="architectures">Architectures</label>
+            <input type="text" id="architectures" name="architectures" placeholder="Enter architectures (e.g., Microservices, Monolith)">
+            
+            <button type="button" onclick="generatePrompt()">Generate Meta-Prompt</button>
+        </form>
+        
+        <h2>Generated Meta-Prompt:</h2>
+        <div class="output" id="output">Your meta-prompt will appear here.</div>
+    </div>
+
+    <script>
+        function generatePrompt() {
+            const roles = document.getElementById('roles').value;
+            const protocols = document.getElementById('protocols').value;
+            const architectures = document.getElementById('architectures').value;
+
+            const outputDiv = document.getElementById('output');
+            if (!roles || !protocols || !architectures) {
+                outputDiv.innerText = 'Please fill in all fields.';
+                return;
+            }
+
+            const metaPrompt = `Role: ${roles}\nProtocols: ${protocols}\nArchitectures: ${architectures}`;
+            outputDiv.textContent = metaPrompt;
+        }
+    </script>
+</body>
+</html>
